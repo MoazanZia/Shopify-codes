@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+
+<!-- Popup Container -->
+<div class="popup-container" id="popupContainer">
+  <div class="popup-box">
+    <span class="close-button" onclick="closePopup()">&times;</span>
+    <h2>Get a Discount!</h2>
+    <p>Subscribe to our newsletter and get 10% off your first purchase.</p>
+    <form class="popup-form">
+      <input class="popup-input" type="email" placeholder="Enter your email">
+      <button class="popup-button" onclick="submitEmail()">Get Discount</button>
+    </form>
+  </div>
+</div>
+
+<script>
+// Open the popup when the page is loaded
+window.onload = function() {
+  openPopup();
+}
+
+// Open the popup function
+function openPopup() {
+  document.getElementById("popupContainer").style.display = "flex";
+}
+
+// Close the popup function
+function closePopup() {
+  document.getElementById("popupContainer").style.display = "none";
+}
+
+// Handle email submission
+function submitEmail() {
+  // You can add your email submission logic here
+  alert("Thank you for subscribing! Your discount code has been sent to your email.");
+  closePopup();
+}
+</script>
+
+</body>
+</html>
